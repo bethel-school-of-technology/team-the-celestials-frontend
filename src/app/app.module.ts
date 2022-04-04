@@ -9,6 +9,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { OrderProfileComponent } from './order-profile/order-profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
     SignUpPageComponent,
     LoginPageComponent,
     FooterPageComponent,
-    SignupPageComponent
+    SignupPageComponent,
+    CheckOutComponent,
+    OrderProfileComponent
   ],
   imports: [
     BrowserModule
