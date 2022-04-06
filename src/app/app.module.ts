@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -9,6 +9,9 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { OrderProfileComponent } from './order-profile/order-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,11 @@ import { OrderProfileComponent } from './order-profile/order-profile.component';
     OrderProfileComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
