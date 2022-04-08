@@ -9,6 +9,7 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { OrderProfileComponent } from './order-profile/order-profile.component';
+import { CreateusersService } from './services/createusers.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { OrderProfileComponent } from './order-profile/order-profile.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CreateusersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
