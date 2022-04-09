@@ -1,27 +1,15 @@
 <div>
     <app-nav-bar></app-nav-bar>
 </div>
-<div class="flex-container" fxLayout="row">
 
-    <div class=first fxFlex="33">
-        <h2>Heavenly Cappacino</h2>
-        <img
-            src="https://media.istockphoto.com/photos/cappuccino-picture-id173245886?b=1&k=20&m=173245886&s=170667a&w=0&h=YSj1U323schKOIu8FuSgZYFGvgegAFR1NtQCA09jP9c=">
-        <p>Ingredients will go here</p>
-        <mat-card>Price will go here</mat-card>
-        <div class="btnclass">
-            <button mat-stroked-button color="primary" class="btncolor">Add To Cart</button>
+<div class="flex-container" fxLayout="row">
+    <div fxFlex="33" *ngFor="let coffee of coffees">
+        <div class=second>
+            <p>{{coffee.nameOfCoffee}}</p>
+            <img [src]='coffee.image_url'/>
+            <p>{{coffee.ingredients}}</p>
+            <p>{{coffee.price}}</p>
+            <button mat-raised-button color="primary">Add To Cart</button>
         </div>
     </div>
-
-    <div class=second fxFlex="33">Second item in row</div>
-    <div class=first fxFlex="33">Third item in row</div>
-</div>
-
-
-
-<div class="flex-container" fxLayout="row">
-    <div class=third fxFlex="33">First item in row</div>
-    <div class=second fxFlex="33">Second item in row</div>
-    <div class=third fxFlex="33">Third item in row</div>
 </div>

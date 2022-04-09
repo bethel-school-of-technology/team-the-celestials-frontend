@@ -17,6 +17,8 @@ margin: 7px;
 
 .flex-container {
     height: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 img {
