@@ -1,1 +1,25 @@
-<p>nav-bar works!</p>
+<!--Nav bar on the top of each page-->
+<mat-toolbar>
+    <div class="divImg"> <!--This div is the picture that will link back to home page-->
+        <button mat-button matTooltip="Home" class="btnimg">
+            <img src="https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_960_720.jpg">
+        </button>
+    </div>
+    <span class="example-spacer"></span>
+    <div class="basketbtn"> <!---->
+        <button mat-mini-fab matTooltip="Checkout" class="example-icon" aria-label="Example icon-button with basket icon">
+            <mat-icon>shopping_basket</mat-icon>
+        </button>
+    </div>
+    <div class="profilebtn">
+        <mat-expansion-panel matTooltip="Profile" hidetoggle>
+            <mat-expansion-panel-header>
+                <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
+                    <mat-icon>perm_identity</mat-icon>
+                </button>
+            </mat-expansion-panel-header>
+            <p>Account</p>
+            <p>Logout</p>
+        </mat-expansion-panel>
+    </div>
+</mat-toolbar>
