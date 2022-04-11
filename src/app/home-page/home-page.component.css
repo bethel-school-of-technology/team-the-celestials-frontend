@@ -1,24 +1,15 @@
-.first {
-background-color: aqua;
-border: solid;
-margin: 7px;
-}
-
-.second {
-    border: solid;
-    margin: 7px;
-}
-
-.third {
-    background-color:rgb(165, 247, 158);
-    border: solid;
-    margin: 7px;
-}
-
 .flex-container {
     height: 500px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.divcoffee {
+    border: solid;
+    margin: 7px;
+    text-align: center;
+    padding: 10px;
+
 }
 
 img {
@@ -28,26 +19,6 @@ img {
     margin-right: auto;
 }
 
-.btncolor {
-    background-color: rgb(151, 208, 241);
-}
 
-.btnclass {
-    margin: 10px;
-    text-align: center;
-}
 
-h2 {
-    text-align: center;
-}
 
-p {
-    text-align: center;
-}
-
-mat-card {
-    max-width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}

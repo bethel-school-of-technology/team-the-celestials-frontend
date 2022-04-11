@@ -16,11 +16,18 @@ mat-toolbar {
 .btnimg {
     width: 100%;
     height: 100%;
+    padding: 3px;
+    border: solid;
+    border-color: rgb(79, 80, 80);
 }
 
 img {
     width: 100%;
     height: 100%;
+}
+
+.title {
+    font-size: 50px;
 }
 
 .basketbtn {
@@ -30,12 +37,10 @@ img {
 
 .profilebtn {
     margin-left: 15px;
+    margin-right: 15px;
 }
-.divbtn {
-    margin-right: 30px;
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-}
+
+
+
 
 

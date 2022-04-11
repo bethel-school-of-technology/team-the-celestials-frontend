@@ -41,7 +41,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatIconModule,
     MatTooltipModule,
     MatExpansionModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,27 @@
 <!--Nav bar on the top of each page-->
 <mat-toolbar>
-    <div class="divImg"> <!--This div is the picture that will link back to home page-->
+
+    <!--This div is the picture that will link back to home page-->
+    <div class="divImg"> 
         <button mat-button matTooltip="Home" class="btnimg">
             <img src="https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_960_720.jpg">
         </button>
     </div>
+
     <span class="example-spacer"></span>
-    <div class="basketbtn"> <!---->
+
+    <p class="title">Our Menu</p>
+
+    <span class="example-spacer"></span>
+
+    <!--This button will direct to checkout page-->
+    <div class="basketbtn"> 
         <button mat-mini-fab matTooltip="Checkout" class="example-icon" aria-label="Example icon-button with basket icon">
             <mat-icon>shopping_basket</mat-icon>
         </button>
     </div>
+
+    <!--This expansion panel will reaveal 2 options to either log out/in or go to profile-->
     <div class="profilebtn">
         <mat-expansion-panel matTooltip="Profile" hidetoggle>
             <mat-expansion-panel-header>
@@ -18,8 +29,9 @@
                     <mat-icon>perm_identity</mat-icon>
                 </button>
             </mat-expansion-panel-header>
-            <p>Account</p>
-            <p>Logout</p>
+            <button mat-button>Account</button>
+            <br>
+            <button mat-button>Logout</button>
         </mat-expansion-panel>
     </div>
 </mat-toolbar>
