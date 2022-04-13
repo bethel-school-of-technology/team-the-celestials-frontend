@@ -18,7 +18,7 @@ mat-toolbar {
     height: 100%;
     padding: 3px;
     border: solid;
-    border-color: rgb(79, 80, 80);
+    border-color: rgb(58, 59, 59);
 }
 
 img {
@@ -33,6 +33,14 @@ img {
 .basketbtn {
     margin-right: 15px;
 
+}
+
+mat-icon {
+    color: rgb(58, 59, 59);
+}
+.btn  {
+    color: white;
+    text-decoration: none;
 }
 
 .profilebtn {

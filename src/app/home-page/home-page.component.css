@@ -4,7 +4,6 @@
     flex-wrap: wrap;
 }
 
-
 .divcoffee {
     border: solid;
     margin: 7px;
@@ -18,16 +17,6 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.footerdiv {
-    width: 100%;
-}
-
-.hgf {
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto ;
 }
 
 
