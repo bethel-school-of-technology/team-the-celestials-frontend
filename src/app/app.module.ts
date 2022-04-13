@@ -18,6 +18,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
+import {MatInputModule} from '@angular/material/input';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
   declarations: [
@@ -42,8 +45,18 @@ import { AppRoutingModule } from './app-routing.module';
     MatTooltipModule,
     MatExpansionModule,
     AppRoutingModule,
+    MatInputModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    constructor(library: FaIconLibrary) {
+      library.addIcons(
+        faTwitter,
+        faFacebook,
+        faInstagram
+      );
+  }
+}

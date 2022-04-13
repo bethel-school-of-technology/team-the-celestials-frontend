@@ -5,7 +5,7 @@
 
 <!--ngFor loops that loops through the mockdb and displays the coffees-->
 <div class="flex-container" fxLayout="row">
-    <div fxFlex="33" *ngFor="let coffee of coffees">
+    <div class="loopcontainer" fxFlex="33" *ngFor="let coffee of coffees">
         <div class=divcoffee>
             <h2>{{coffee.nameOfCoffee}}</h2>
             <img [src]='coffee.image_url'/>
@@ -15,4 +15,8 @@
             <button mat-raised-button color="primary" class="btncoffee">Add To Cart</button>
         </div>
     </div>
+    <div class="footerdiv">
+        <app-footer-page></app-footer-page>
+    </div>
 </div>
+
