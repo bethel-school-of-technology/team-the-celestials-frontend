@@ -1,0 +1,23 @@
+.flex-container {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divcoffee {
+    border: solid;
+    margin: 7px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+img {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+

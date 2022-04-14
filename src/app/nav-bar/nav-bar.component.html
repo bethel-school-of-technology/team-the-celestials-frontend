@@ -1,1 +1,43 @@
-<p>nav-bar works!</p>
+<!--Nav bar on the top of each page-->
+<mat-toolbar>   
+
+    <!--This div is the picture that will link back to home page-->
+    <div class="divImg"> 
+        <button mat-button matTooltip="Home" class="btnimg">
+            <a class="btn" routerLink="home" routerLinkActive="active">
+                <img src="https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_960_720.jpg">
+            </a>
+        </button>
+    </div>
+
+    <span class="example-spacer"></span>
+
+    <p class="title">Celestial Coffe Shop</p>
+
+    <span class="example-spacer"></span>
+
+    <!--This button will direct to checkout page-->
+    <div class="basketbtn"> 
+        <button mat-mini-fab matTooltip="Checkout" class="example-icon" aria-label="Example icon-button with basket icon">
+            <a class="btn" routerLink="checkout" routerLinkActive="active">
+                <mat-icon>shopping_basket</mat-icon>
+            </a>
+        </button>
+    </div>
+
+    <!--This expansion panel will reaveal 2 options to either log out/in or go to profile-->
+    <div class="profilebtn">
+        <mat-expansion-panel matTooltip="Profile" hidetoggle>
+            <mat-expansion-panel-header>
+                <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
+                    <mat-icon>perm_identity</mat-icon>
+                </button>
+            </mat-expansion-panel-header>
+            <button mat-button>
+                <a class="btn" routerLink="profile" routerLinkActive="active">Account</a>
+            </button>
+            <br>
+            <button mat-button>Logout</button>
+        </mat-expansion-panel>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,54 @@
+mat-toolbar {
+    height: 100px;
+    background-color: rgb(228, 163, 85);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.divImg {
+    height: 100%;
+    width: auto ;
+    margin-left: 50px;
+}
+
+.btnimg {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    border: solid;
+    border-color: rgb(58, 59, 59);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.basketbtn {
+    margin-right: 15px;
+
+}
+
+mat-icon {
+    color: rgb(58, 59, 59);
+}
+.btn  {
+    color: white;
+    text-decoration: none;
+}
+
+.profilebtn {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+
+
+
