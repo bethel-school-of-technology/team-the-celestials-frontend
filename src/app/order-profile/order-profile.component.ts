@@ -1,6 +1,11 @@
 
 import { Component, OnInit } from '@angular/core';
 
+
+
+
+
+export class ButtonTypesExample {}
 @Component({
   selector: 'app-order-profile',
   templateUrl: './order-profile.component.html',
@@ -14,4 +19,6 @@ export class OrderProfileComponent implements OnInit {
   }
 
 }
+
+
 

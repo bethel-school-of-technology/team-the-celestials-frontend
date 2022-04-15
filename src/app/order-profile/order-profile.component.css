@@ -27,3 +27,9 @@ margin-right: auto;
   mat-label{
     color: black;
   }
+  .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+
+  background-color: rgb(16, 28, 204);
+}
