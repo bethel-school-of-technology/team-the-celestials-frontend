@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginComponent } from './login-page/login-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { OrderProfileComponent } from './order-profile/order-profile.component';
-import { CreateusersService } from './services/createusers.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     NavBarComponent,
-    LoginPageComponent,
+    LoginComponent,
     FooterPageComponent,
     SignupPageComponent,
     CheckOutComponent,
@@ -25,7 +28,7 @@ import { CreateusersService } from './services/createusers.service';
   imports: [
     BrowserModule
   ],
-  providers: [CreateusersService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
