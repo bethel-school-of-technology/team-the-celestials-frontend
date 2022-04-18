@@ -1,7 +1,9 @@
 .flex-container {
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* flex-wrap: wrap; */
+    width: 80%;
+    margin: auto;
 }
 
 .divcoffee {
@@ -9,7 +11,9 @@
     margin: 7px;
     text-align: center;
     padding: 10px;
-
+    width: 300px;
+    height: 400px;
+    margin: auto;
 }
 
 img {
@@ -17,6 +21,20 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .flex-container {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .flex-container {
+        grid-template-columns: 1fr;    
+    }
+
 }
 
 
