@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CoffeesService {
-  private coffeesRoute = 'http://localhost:3000/coffee';
+  private coffeesRoute = 'http://localhost:3000/coffees';
 
   constructor(private http: HttpClient) { }
   getCoffees(): Observable<Coffee[]>{
