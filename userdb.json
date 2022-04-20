@@ -1,0 +1,12 @@
+{ 
+
+    "user":[
+        {
+            "id":0,
+            "firstName":"JohnDoe",
+            "lastName":"DoeMan",
+            "email":"JDOE@JDOE.com",
+            "phone":180382308
+        }
+    ]
+}

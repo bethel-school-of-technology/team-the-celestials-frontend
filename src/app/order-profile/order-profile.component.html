@@ -26,6 +26,7 @@
         <td><mat-form-field class="example-full-width" appearance="fill">
           <mat-label>First Name</mat-label>
           <input matInput>
+           <p> {{currentUser.firstName }}  </p>
         </mat-form-field></td>
         <td><mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Last Name</mat-label>
@@ -41,6 +42,7 @@
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Phone Number</mat-label>
           <textarea matInput></textarea>
+          <p>hello</p>
         </mat-form-field>
       </p>
 
@@ -48,6 +50,7 @@
         <button mat-raised-button>Edit Info </button>
         <button mat-raised-button color="primary">Delete Account </button>
 
+        <a mat-raised-button routerLink=".">Link</a>
       </div>
 
       <mat-form-field class="example-full-width" appearance="fill">

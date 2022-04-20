@@ -19,7 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
-
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +47,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatExpansionModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [ UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
