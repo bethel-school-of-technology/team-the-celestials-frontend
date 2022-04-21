@@ -14,17 +14,18 @@ export class ButtonTypesExample {}
 export class OrderProfileComponent implements OnInit {
  
  
- 
- 
     // Property to store current user Info
     currentUser: User = new User();
     userID: number | any;
+
     constructor(private actRoute: ActivatedRoute, private myUserService: UserService, private router: Router) { }
    
     ngOnInit(): void {
+
       // Extracted the ID from URL
-      this.userID = this.actRoute.snapshot.paramMap.get("userId");
+      this.userID = this.actRoute.snapshot.paramMap.get("userID");
       console.log(this.userID);
+
       // Fetch the usercorresponding to the ID
       this.myUserService.getOneUser(this.userID).subscribe(response => {
         console.log(response);

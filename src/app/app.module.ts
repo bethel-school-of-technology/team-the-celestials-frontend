@@ -12,14 +12,16 @@ import { OrderProfileComponent } from './order-profile/order-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
-import { UserService } from './services/user.service';
+import {MatInputModule} from '@angular/material/input';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { CoffeesService } from './services/coffees.service';
 
 @NgModule({
   declarations: [
@@ -38,16 +40,24 @@ import { UserService } from './services/user.service';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatInputModule,
     MatButtonModule,
-  
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
     MatExpansionModule,
     AppRoutingModule,
+    MatInputModule,
+    FontAwesomeModule,
   ],
-  providers: [ UserService],
+  providers: [CoffeesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    constructor(library: FaIconLibrary) {
+      library.addIcons(
+        faTwitter,
+        faFacebook,
+        faInstagram
+      );
+  }
+}

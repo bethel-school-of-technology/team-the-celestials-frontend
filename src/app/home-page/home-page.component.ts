@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
 import { Coffee } from '../models/coffee';
+import { CoffeesService } from '../services/coffees.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,20 +8,14 @@ import { Coffee } from '../models/coffee';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  private coffeesRoute = 'http://localhost:3000/coffee';
   public coffees: Coffee[];
 
-  constructor(private http: HttpClient) { }
-
-  getCoffees() {
-    this.http.get<Coffee[]>(this.coffeesRoute).subscribe(coffees => {
-        this.coffees = coffees;
-        console.log('Coffees', this.coffees);
-    });
-  }
+  constructor(private coffeesService: CoffeesService) {}
 
   ngOnInit(): void {
-    this.getCoffees();
+    this.coffeesService.getCoffees().subscribe(response => {
+      console.log(response);
+      this.coffees = response;
+    })
   }
-
 }
