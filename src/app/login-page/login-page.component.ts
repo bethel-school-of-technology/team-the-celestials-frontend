@@ -1,43 +1,58 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
 
-import { AlertService, AuthenticationService } from '../services/index';
+import { AccountService, AlertService } from '../_services';
 
-@Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
-})
-
+@Component({ templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
-    model: any = {};
+    form!: FormGroup; /**added ! */
     loading = false;
-    returnUrl: any; /**changed from string to any */
+    submitted = false;
 
     constructor(
+        private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService,
-        private alertService: AlertService) { }
+        private accountService: AccountService,
+        private alertService: AlertService
+    ) { }
 
     ngOnInit() {
-        // reset login status
-        this.authenticationService.logout();
-
-        // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+        this.form = this.formBuilder.group({
+            email: ['', Validators.required],
+            password: ['', Validators.required]
+        });
     }
 
-    login() {
+    // convenience getter for easy access to form fields
+    get f() { return this.form.controls; }
+
+    onSubmit() {
+        this.submitted = true;
+
+        // reset alerts on submit
+        this.alertService.clear();
+
+        // stop here if form is invalid
+        if (this.form.invalid) {
+            return;
+        }
+
         this.loading = true;
-        this.authenticationService.login(this.model.email, this.model.password)
-            .subscribe(
-                () /*replaced data with ()*/ => {
-                    this.router.navigate([this.returnUrl]);
+        this.accountService.login(this.f.email.value, this.f.password.value)
+            .pipe(first())
+            .subscribe({
+                next: () => {
+                    // get return url from query parameters or default to home page
+                    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+                    this.router.navigateByUrl(returnUrl);
                 },
-                (error: string) /**replaced with error*/ => {
+                error: (error: any) /**added "any" */ => {
                     this.alertService.error(error);
                     this.loading = false;
-                });
+                }
+            });
     }
 }

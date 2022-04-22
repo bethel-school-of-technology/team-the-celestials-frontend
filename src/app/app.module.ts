@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './home-page/home-page.component';
@@ -14,6 +13,11 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { OrderProfileComponent } from './order-profile/order-profile.component';
 import { UserService } from './services/user.service';
 
+import { fakeBackendProvider } from './helpers';
+import { AppRoutingModule } from './app-routing.module';
+import { JwtInterceptor, ErrorInterceptor } from './helpers';
+import { AlertComponent } from './components';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +27,20 @@ import { UserService } from './services/user.service';
     FooterPageComponent,
     SignupPageComponent,
     CheckOutComponent,
-    OrderProfileComponent
+    OrderProfileComponent,
+    AlertComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [
+    UserService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
