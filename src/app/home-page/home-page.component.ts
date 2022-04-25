@@ -18,4 +18,9 @@ export class HomePageComponent implements OnInit {
       this.coffees = response;
     })
   }
-}
+
+    addItemToCart(nameOfCoffee:string){
+      localStorage.setItem(nameOfCoffee, nameOfCoffee)
+      // localStorage.clear()
+    }
+  }
