@@ -20,6 +20,7 @@ export class HomePageComponent implements OnInit {
   }
 
     addItemToCart(nameOfCoffee:string){
-      localStorage.setItem("name", nameOfCoffee)
+      localStorage.setItem(nameOfCoffee, nameOfCoffee)
+      // localStorage.clear()
     }
-}
+  }
