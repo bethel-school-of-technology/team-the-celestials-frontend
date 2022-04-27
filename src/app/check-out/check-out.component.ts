@@ -7,17 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckOutComponent implements OnInit {
   public items: any;
-  public order = "";
 
   constructor() { }
 
   ngOnInit(): void {
     this.items = localStorage.getItem('items');
 
-    for (var key in this.items) {
-      if (this.items.hasOwnProperty(key)) {
-          console.log(key + " -> " + this.items[key]);
-      }
-    }
+    //Trying to get each of the values displayed separetely.
+    // for (var key in this.items) {
+    //   if (this.items.hasOwnProperty(key)) {
+    //       console.log(key + " -> " + this.items[key]);
+    //   }
+    // }
+  }
+
+  deleteItems() {
+    localStorage.removeItem('items');
+    this.items = localStorage.getItem('items');
   }
 }
