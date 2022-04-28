@@ -1,1 +1,30 @@
-<p>login-page works!</p>
+<header class="head">
+    <div id="login">
+        <div class="container flex-container">
+            <form class="flex">
+                <div id="heading">
+                    <br>
+                    <br>
+                    <h1>Login</h1>
+                </div>
+                <div>
+                    <div class="form-container"></div> <label for="Email"></label>
+                    <input class="form-input" name="email" type="text" placeholder="Email" [(ngModel)]="user.email" />
+                </div>
+                <div class="form-container"> <label for="Password"></label>
+                    <input class="form-input" name="Password" type="password" placeholder="Password"
+                        [(ngModel)]="user.password" />
+                </div>
+                <div class="flex-button"> <button type="button" class="form-button" (click)="goToLogin()">Login</button>
+                    <br>
+                    <br>
+                    <br>
+
+                    <h3>Don't have an account?</h3>
+                    <a class="clickHere" style="color: grey" href="/signup"><h5>Click here</h5></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+<body></body>

@@ -1,1 +1,49 @@
-<p>signup-page works!</p>
+<header class="head">
+    <div id="sign-up">
+        <div class="container center">
+            <form class="flex">
+                <div id="heading"> 
+                    <br>
+                    <br>
+                    <h1>Sign Up</h1>
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <input [(ngModel)]="user.firstName" class="form-input" type="text" name="firstName" required
+                        placeholder="First Name" />
+                </div>
+                <div class="form-group">
+                    <input [(ngModel)]="user.lastName" class="form-input" type="text" name="lastName" required
+                        placeholder="Last Name" />
+                </div>
+                <div class="form-group">
+                    <input [(ngModel)]="user.email" class="form-input" type="text" name="email" required
+                        placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <input [(ngModel)]="user.phoneNumber" class="form-input" type="text" name="phoneNumber" required
+                        placeholder="Phone Number" />
+                </div>
+                <div class="form-group">
+                    <input [(ngModel)]="user.password" class="form-input" type="password" name="password" required
+                        minlength="8" placeholder="Password" />
+                </div>
+
+
+                <div class="flex-button">
+                    <button type="button" (click)="register()" class="form-button btn-primary btn:hover">
+                        Submit
+                    </button>
+                    <br>
+                    <br>
+                    <h3>Already have an account?</h3>
+                    <a class="clickHere" style="color: grey" href="/login">Click here</a>
+                </div>
+            </form>
+        </div>
+
+        <div></div>
+    </div>
+</header>
+<body></body>

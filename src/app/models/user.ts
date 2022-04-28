@@ -5,4 +5,5 @@ export class User {
     email: string;
     phoneNumber: number;
     password: string;
+    token: User;
 }
