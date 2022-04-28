@@ -1,58 +1,54 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
+import { NavigationEnd, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { User } from '../models/user';
 
-import { AccountService, AlertService } from '../_services';
+@Component({
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.css']
+})
+export class LoginPageComponent implements OnInit {
 
-@Component({ templateUrl: 'login.component.html' })
-export class LoginComponent implements OnInit {
-    form!: FormGroup; /**added ! */
-    loading = false;
-    submitted = false;
+  user: User = new User();
 
-    constructor(
-        private formBuilder: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
-        private accountService: AccountService,
-        private alertService: AlertService
-    ) { }
+  userData: User = new User();
+  
 
-    ngOnInit() {
-        this.form = this.formBuilder.group({
-            email: ['', Validators.required],
-            password: ['', Validators.required]
-        });
-    }
+  constructor(private router: Router, private service: AuthService) { }
 
-    // convenience getter for easy access to form fields
-    get f() { return this.form.controls; }
+  ngOnInit(): void {
 
-    onSubmit() {
-        this.submitted = true;
+    /**Home page for Huck
+    let myToken = localStorage.getItem("userToken");
 
-        // reset alerts on submit
-        this.alertService.clear();
+    this.service.getProfile(myToken).subscribe(response => {
+      this.userData = response;
+    })*/
 
-        // stop here if form is invalid
-        if (this.form.invalid) {
-            return;
-        }
+  }
+  goToSignUp() {
+    this.router.navigate(['./signup']);
+  }
+  goToLogin() {
+    console.log('here');
 
-        this.loading = true;
-        this.accountService.login(this.f.email.value, this.f.password.value)
-            .pipe(first())
-            .subscribe({
-                next: () => {
-                    // get return url from query parameters or default to home page
-                    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-                    this.router.navigateByUrl(returnUrl);
-                },
-                error: (error: any) /**added "any" */ => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                }
-            });
-    }
+    this.service.login(this.user.email, this.user.password).subscribe((response) => {
+      console.log(response);
+
+      localStorage.setItem("userToken", JSON.stringify(response));
+
+      this.router.navigate(['home']);
+
+    })
+
+  }
+
+
+
+
+
+
+
+
 }
