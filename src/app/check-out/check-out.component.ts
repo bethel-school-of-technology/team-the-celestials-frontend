@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Coffee } from '../models/coffee';
 
 @Component({
   selector: 'app-check-out',
@@ -6,23 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./check-out.component.css']
 })
 export class CheckOutComponent implements OnInit {
-  public items: any;
+  public items: Coffee[];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.items = localStorage.getItem('items');
+    let coffeeString = localStorage.getItem('items');
 
-    //Trying to get each of the values displayed separetely.
-    // for (var key in this.items) {
-    //   if (this.items.hasOwnProperty(key)) {
-    //       console.log(key + " -> " + this.items[key]);
-    //   }
-    // }
+      if (coffeeString !== null) {
+
+      this.items = JSON.parse(coffeeString);
+
+      let coffeeIds = [];
+
+      for (let key in this.items) {
+        coffeeIds.push(this.items[key].coffee_id);
+        // console.log(this.items[key].coffee_id);
+      }
+
+      console.log(coffeeIds);
+
+    }
   }
-
+  
   deleteItems() {
     localStorage.removeItem('items');
-    this.items = localStorage.getItem('items');
+    this.items = [];
+    // this.items = localStorage.getItem('items');
   }
 }

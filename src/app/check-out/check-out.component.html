@@ -2,10 +2,11 @@
 <!--ngFor loops that loops through the mockdb and displays the coffees-->
 
 
-
+<div fxLayout="row">
 
 <div class="Title" >
 
+  <div class="checkoutBody">
 
     <mat-card>Credit Card Transaction</mat-card>
  
@@ -41,23 +42,32 @@
         
       </tr></table>
     </form>
-
-    <div class="listItems">
-      <p>{{items}}</p>
-      <button mat-raised-button color="primary" (click)="deleteItems()" onClick="ManualRefresh()">Delete Orders</button>
-    </div>
-    
-    <br>
-    
     <div class="example-button-row">
-        <button mat-raised-button>Pay with 3rd Party </button>
-        <button mat-raised-button color="primary">Submit Order </button>
+      <button mat-raised-button>Pay with 3rd Party </button>
+      <button mat-raised-button color="primary">Submit Order </button>
 
-      </div>
-
-
-
+    </div>
+  </div>
     
+
+  </div>
+
+
+  <div class="checkoutList">
+    <div class="listItems">
+        <div class="loopcontainer"  *ngFor="let item of items">
+          <div class="divcoffee">
+              <h2>{{item.nameOfCoffee}}</h2>
+              <img [src]='item.img_url'/>
+              <p>Price: ${{item.price}}</p>
+              <button mat-raised-button color="primary" (click)="deleteItems()">Delete Orders</button>
+              <br>
+              <br>
+          </div>
+        </div>
+    </div>
+  </div>
+
 </div>
 
 

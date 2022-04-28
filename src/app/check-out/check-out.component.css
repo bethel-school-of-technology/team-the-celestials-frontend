@@ -9,13 +9,22 @@
 
 
   .Title {
-  width: 250px;
+  width: 300px;
   text-align: center;
   margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-  background-color: rgb(174, 121, 52);  
+  margin-right: 4em;
+  height: 100%;
   }
+
+  .checkoutBody {
+    height: 500px;
+    background-color: rgb(174, 121, 52);
+    padding: 30px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    border-radius: 10px;
+  }
+
   .example-form {
     color: black;
       min-width: 150px;
@@ -40,3 +49,33 @@
     
       background-color: rgb(16, 204, 94);
     }
+
+    img {
+      height: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .checkoutList {
+    text-align: center;
+    margin-left: 4em;
+    margin-right: auto;
+    height: 100%;
+  }
+  
+  .listItems {
+    height: 500px;
+    width: 250px;
+    background-color: rgb(174, 121, 52);
+    padding: 30px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .divcoffee {
+    border: solid 2px black;
+  }

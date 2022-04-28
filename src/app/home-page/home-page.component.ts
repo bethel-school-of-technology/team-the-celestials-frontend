@@ -9,7 +9,6 @@ import { CoffeesService } from '../services/coffees.service';
 })
 export class HomePageComponent implements OnInit {
   public coffees: Coffee[];
-  public items: any;
 
   constructor(private coffeesService: CoffeesService) {}
 
@@ -20,7 +19,7 @@ export class HomePageComponent implements OnInit {
     )
   }
 
-    addItemToCart(nameOfCoffee:string){
+    addItemToCart(coffee: Coffee){
       const localStorageContent = localStorage.getItem('items');
 
       let items;
@@ -28,12 +27,27 @@ export class HomePageComponent implements OnInit {
         items = [];
       }
       else {
-        items = JSON.parse (localStorageContent );
+        items = JSON.parse(localStorageContent);
       }
 
-      items.push(nameOfCoffee);
+      items.push(coffee);
 
       localStorage.setItem('items', JSON.stringify(items));
 
     }
+
+    // addItemToCart(nameOfCoffee:string) {
+    //   const localStorageContent = localStorage.getItem('items')
+
+    //   if(localStorage.getItem('items') == null) {
+    //     localStorage.setItem('items', '[]');
+    //   }
+
+    //   let oldData = JSON.parse(localStorage.getItem('items') || '[]');
+    //   oldData.push(nameOfCoffee);
+
+    //   localStorage.setItem('items', JSON.stringify(nameOfCoffee));
+    // }
+
+
   }
