@@ -1,13 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
 import { User } from '../models/user';
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class UserService {
-    constructor(private http: HttpClient) { }
+  
+    myUserUrl: string ="http://localhost:3000/user"
 
+    constructor(private http: HttpClient) { }
+  
+    getOneUser(userID: number): Observable<User>{
+    return this.http.get<User>(`${this.myUserUrl}/${userID}`)
+    }
+      
     getAll() {
         return this.http.get<User[]>('/api/users');
     }

@@ -1,1 +1,18 @@
-<p>home-page works!</p>
+<!--The below div links the nav bar file to be placed on the top of the page-->
+
+
+<!--ngFor loops that loops through the mockdb and displays the coffees-->
+<div class="flex-container">
+    <div class="loopcontainer"  *ngFor="let coffee of coffees">
+        <div class="divcoffee">
+            <h2>{{coffee.nameOfCoffee}}</h2>
+            <img [src]='coffee.img_url'/>
+            <br>
+            <p>Ingredients: {{coffee.ingridients}}</p>
+            <p>Price: ${{coffee.price}}</p>
+            <button mat-raised-button class="btncoffee" (click) = "addItemToCart(coffee)">Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- fxFlex="33"    fxLayout="row" -->

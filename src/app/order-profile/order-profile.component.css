@@ -1,0 +1,43 @@
+
+
+
+.Title {
+width: 500px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+height: 100%;
+}
+
+.profileBody {
+  background-color: rgb(174, 121, 52);
+  padding: 30px;
+  margin-top: 50%;
+  margin-bottom: 50%;
+  border-radius: 10px;
+}
+
+.example-form {
+  color: black;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    background-color: rgb(73, 112, 33);
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  mat-label{
+    color: black;
+  }
+  .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+
+  background-color: rgb(16, 28, 204);
+}
