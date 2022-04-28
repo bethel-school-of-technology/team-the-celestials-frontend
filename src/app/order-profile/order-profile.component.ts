@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
 
+import { Component, OnInit } from '@angular/core';
+import { User } from '../models/user';
+import { UserService } from '../services/user.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
+
+export class ButtonTypesExample {}
 @Component({
   selector: 'app-order-profile',
   templateUrl: './order-profile.component.html',
@@ -7,9 +13,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderProfileComponent implements OnInit {
 
-  constructor() { }
+ 
+    // Property to store current user Info
+    currentUser: User = new User();
+    userID: number | any;
 
-  ngOnInit(): void {
-  }
+    constructor(private actRoute: ActivatedRoute, private myUserService: UserService, private router: Router) { }
+   
+    ngOnInit(): void {
+
+      // Extracted the ID from URL
+      this.userID = this.actRoute.snapshot.paramMap.get("userID");
+      console.log(this.userID);
+
+      // Fetch the usercorresponding to the ID
+      this.myUserService.getOneUser(this.userID).subscribe(response => {
+        console.log(response);
+        this.currentUser = response;
+      })
+    }
+  
+
+
 
 }
+
+
+

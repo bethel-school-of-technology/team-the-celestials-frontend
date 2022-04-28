@@ -21,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatInputModule} from '@angular/material/input';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { CoffeesService } from './services/coffees.service';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -47,8 +49,9 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
     AppRoutingModule,
     MatInputModule,
     FontAwesomeModule,
+    MatBadgeModule
   ],
-  providers: [],
+  providers: [CoffeesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

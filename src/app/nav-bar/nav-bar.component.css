@@ -1,6 +1,7 @@
 mat-toolbar {
     height: 100px;
     background-color: rgb(228, 163, 85);
+    width: auto;
 }
 
 .example-spacer {
@@ -27,7 +28,7 @@ img {
 }
 
 .title {
-    font-size: 50px;
+    font-size: 4.8vw;
 }
 
 .basketbtn {
@@ -48,6 +49,12 @@ mat-icon {
     margin-right: 15px;
 }
 
+
+@media only screen and (min-width: 1200px) {
+    .title {
+        font-size: 60px;
+    }
+}
 
 
 

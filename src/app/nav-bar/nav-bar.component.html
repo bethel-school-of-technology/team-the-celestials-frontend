@@ -20,7 +20,7 @@
     <div class="basketbtn"> 
         <button mat-mini-fab matTooltip="Checkout" class="example-icon" aria-label="Example icon-button with basket icon">
             <a class="btn" routerLink="checkout" routerLinkActive="active">
-                <mat-icon>shopping_basket</mat-icon>
+                <mat-icon matBadge="1">shopping_basket</mat-icon>
             </a>
         </button>
     </div>
@@ -34,7 +34,7 @@
                 </button>
             </mat-expansion-panel-header>
             <button mat-button>
-                <a class="btn" routerLink="profile" routerLinkActive="active">Account</a>
+                <a class="btn" routerLink="profile/:userID" routerLinkActive="active">Account</a>
             </button>
             <br>
             <button mat-button>Logout</button>

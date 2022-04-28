@@ -1,1 +1,68 @@
-<p>order-profile works!</p>
+    <div class="Title" >
+    
+    <div class="profileBody">
+
+
+      <h1><mat-card>My Profile </mat-card></h1>
+ 
+    
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Acount Information)</mat-label>
+        <input matInput disabled value="Order#">
+      </mat-form-field>
+    
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput>
+           <p> {{currentUser.firstName }}  </p>
+           <p>Trying to get name</p>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput>
+        </mat-form-field></td>
+      </tr></table>
+    
+      <p>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <textarea matInput placeholder="Something here"></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Phone Number</mat-label>
+          <textarea matInput></textarea>
+          <p>hello</p>
+        </mat-form-field>
+      </p>
+
+      <div class="example-button-row">
+        <button mat-raised-button>Edit Info </button>
+        <button mat-raised-button color="primary">Delete Account </button>
+
+        <a mat-raised-button routerLink=".">Link</a>
+      </div>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>My Order/Confirmation</mat-label>
+        <input matInput disabled value="Order#">
+      </mat-form-field>
+      
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Products Purchased:</mat-label>
+          <input matInput placeholder="Ex. San Francisco">
+        </mat-form-field></td>
+       
+      </tr></table>
+    </form>
+  
+
+</div>
+
+    
+</div>
+
+
+

@@ -1,7 +1,7 @@
 export class Coffee {
-    id: number;
+    coffee_id: number;
     nameOfCoffee: string;
-    ingredients: string;
+    ingridients: string;
     price: number;
-    image_url: string;
+    img_url: string;
 }

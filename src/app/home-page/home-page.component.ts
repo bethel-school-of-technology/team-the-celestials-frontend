@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
 import { Coffee } from '../models/coffee';
+import { CoffeesService } from '../services/coffees.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,20 +8,46 @@ import { Coffee } from '../models/coffee';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  private coffeesRoute = 'http://localhost:3000/coffee';
   public coffees: Coffee[];
 
-  constructor(private http: HttpClient) { }
-
-  getCoffees() {
-    this.http.get<Coffee[]>(this.coffeesRoute).subscribe(coffees => {
-        this.coffees = coffees;
-        console.log('Coffees', this.coffees);
-    });
-  }
+  constructor(private coffeesService: CoffeesService) {}
 
   ngOnInit(): void {
-    this.getCoffees();
+    this.coffeesService.getCoffees().subscribe(response => {
+      this.coffees = response;
+    },
+    )
   }
 
-}
+    addItemToCart(coffee: Coffee){
+      const localStorageContent = localStorage.getItem('items');
+
+      let items;
+      if (localStorageContent === null ) {
+        items = [];
+      }
+      else {
+        items = JSON.parse(localStorageContent);
+      }
+
+      items.push(coffee);
+
+      localStorage.setItem('items', JSON.stringify(items));
+
+    }
+
+    // addItemToCart(nameOfCoffee:string) {
+    //   const localStorageContent = localStorage.getItem('items')
+
+    //   if(localStorage.getItem('items') == null) {
+    //     localStorage.setItem('items', '[]');
+    //   }
+
+    //   let oldData = JSON.parse(localStorage.getItem('items') || '[]');
+    //   oldData.push(nameOfCoffee);
+
+    //   localStorage.setItem('items', JSON.stringify(nameOfCoffee));
+    // }
+
+
+  }

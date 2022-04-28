@@ -15,7 +15,8 @@ const routes: Routes = [
     component: CheckOutComponent
   },
   {
-    path: 'profile',
+
+    path: 'profile/:userID',
     component: OrderProfileComponent
   },
   {
