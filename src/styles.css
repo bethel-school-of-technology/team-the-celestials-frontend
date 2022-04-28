@@ -14,3 +14,16 @@ app-root {
     display: block;
     height: 100%;
   }
+
+a { cursor: pointer }
+
+.app-container {
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.btn-delete-user {
+    width: 40px;
+    text-align: center;
+    box-sizing: content-box;
+}
