@@ -36,7 +36,8 @@ export class LoginPageComponent implements OnInit {
     this.service.login(this.user.email, this.user.password).subscribe((response) => {
       console.log(response);
 
-      localStorage.setItem("userToken", JSON.stringify(response));
+      localStorage.setItem("userToken", JSON.stringify(response.jwt));
+      localStorage.setItem("user", JSON.stringify(response.user));
 
       this.router.navigate(['home']);
 
