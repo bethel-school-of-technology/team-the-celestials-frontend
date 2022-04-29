@@ -36,18 +36,4 @@ export class HomePageComponent implements OnInit {
 
     }
 
-    // addItemToCart(nameOfCoffee:string) {
-    //   const localStorageContent = localStorage.getItem('items')
-
-    //   if(localStorage.getItem('items') == null) {
-    //     localStorage.setItem('items', '[]');
-    //   }
-
-    //   let oldData = JSON.parse(localStorage.getItem('items') || '[]');
-    //   oldData.push(nameOfCoffee);
-
-    //   localStorage.setItem('items', JSON.stringify(nameOfCoffee));
-    // }
-
-
   }

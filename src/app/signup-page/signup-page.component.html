@@ -1,49 +1,46 @@
-<header class="head">
-    <div id="sign-up">
-        <div class="container center">
-            <form class="flex">
-                <div id="heading"> 
-                    <br>
-                    <br>
-                    <h1>Sign Up</h1>
-                </div>
+<div class="sign-up">
+    <div class="signupDiv">
+        <form class="flex">
+            <div id="heading"> 
                 <br>
-                <div class="form-group">
+                <br>
+                <h1>Sign Up</h1>
+            </div>
+            <br>
+            <div class="form-group">
 
-                    <input [(ngModel)]="user.firstName" class="form-input" type="text" name="firstName" required
-                        placeholder="First Name" />
-                </div>
-                <div class="form-group">
-                    <input [(ngModel)]="user.lastName" class="form-input" type="text" name="lastName" required
-                        placeholder="Last Name" />
-                </div>
-                <div class="form-group">
-                    <input [(ngModel)]="user.email" class="form-input" type="text" name="email" required
-                        placeholder="Email" />
-                </div>
-                <div class="form-group">
-                    <input [(ngModel)]="user.phoneNumber" class="form-input" type="text" name="phoneNumber" required
-                        placeholder="Phone Number" />
-                </div>
-                <div class="form-group">
-                    <input [(ngModel)]="user.password" class="form-input" type="password" name="password" required
-                        minlength="8" placeholder="Password" />
-                </div>
+                <input [(ngModel)]="user.firstName" class="form-input" type="text" name="firstName" required
+                    placeholder="First Name" />
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="user.lastName" class="form-input" type="text" name="lastName" required
+                    placeholder="Last Name" />
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="user.email" class="form-input" type="text" name="email" required
+                    placeholder="Email" />
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="user.phoneNumber" class="form-input" type="text" name="phoneNumber" required
+                    placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="user.password" class="form-input" type="password" name="password" required
+                    minlength="8" placeholder="Password" />
+            </div>
 
 
-                <div class="flex-button">
-                    <button type="button" (click)="register()" class="form-button btn-primary btn:hover">
-                        Submit
-                    </button>
-                    <br>
-                    <br>
-                    <h3>Already have an account?</h3>
-                    <a class="clickHere" style="color: grey" href="/login">Click here</a>
-                </div>
-            </form>
-        </div>
-
-        <div></div>
+            <div class="flex-button">
+                <button type="button" (click)="register()" class="form-button btn-primary btn:hover">
+                    Submit
+                </button>
+                <br>
+                <br>
+                <h3>Already have an account?</h3>
+                <button mat-raised-button>
+                    <a class="clickHere" routerLink="/login">Click here</a>
+                </button>
+            </div>
+        </form>
     </div>
-</header>
-<body></body>
+</div>
