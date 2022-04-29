@@ -14,13 +14,26 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.coffeesService.getCoffees().subscribe(response => {
-      console.log(response);
       this.coffees = response;
-    })
+    },
+    )
   }
 
-    addItemToCart(nameOfCoffee:string){
-      localStorage.setItem(nameOfCoffee, nameOfCoffee)
-      // localStorage.clear()
+    addItemToCart(coffee: Coffee){
+      const localStorageContent = localStorage.getItem('items');
+
+      let items;
+      if (localStorageContent === null ) {
+        items = [];
+      }
+      else {
+        items = JSON.parse(localStorageContent);
+      }
+
+      items.push(coffee);
+
+      localStorage.setItem('items', JSON.stringify(items));
+
     }
+
   }

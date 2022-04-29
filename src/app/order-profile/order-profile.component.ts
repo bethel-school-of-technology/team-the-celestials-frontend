@@ -12,7 +12,7 @@ export class ButtonTypesExample {}
   styleUrls: ['./order-profile.component.css']
 })
 export class OrderProfileComponent implements OnInit {
- 
+
  
     // Property to store current user Info
     currentUser: User = new User();
