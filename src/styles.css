@@ -8,24 +8,5 @@ body {
     background-image: url(https://cdn.pixabay.com/photo/2020/07/29/08/33/coffee-5447420_1280.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    background-size: cover;
+    background-size: cover; 
 }
-
-app-root {
-    /* display: block; */
-    height: 100%;
-    width: 100%;
-  }
-
-/* a { cursor: pointer }
-
-.app-container {
-    min-height: 320px;
-    overflow: hidden;
-}
-
-.btn-delete-user {
-    width: 40px;
-    text-align: center;
-    box-sizing: content-box;
-} */

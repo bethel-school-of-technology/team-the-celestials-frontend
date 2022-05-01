@@ -1,6 +1,8 @@
 .wholePage {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 55px;
+  margin-bottom: 55px;
 }
 
 .example-card {
