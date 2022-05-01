@@ -10,11 +10,11 @@ export class NavBarComponent implements OnInit {
   public items: Coffee[];
   public itemsInCart: number;
 
-  constructor() {
-    setInterval(this.listCartnumber.bind(this), 500);
-  }
+  constructor() {setInterval(this.listCartnumber.bind(this), 500)}
 
   ngOnInit(): void {
+
+    //Pulls string of coffees from local storage and transforms it to an object to be looped through
     let coffeeString = localStorage.getItem('items');
 
       if (coffeeString !== null) {
@@ -23,8 +23,9 @@ export class NavBarComponent implements OnInit {
 
       this.itemsInCart = this.items.length
     }
-
   }
+
+  //Finds the number of coffees in cart so matBadge can display number of items in cart
   listCartnumber() {
     let coffeeString = localStorage.getItem('items');
 

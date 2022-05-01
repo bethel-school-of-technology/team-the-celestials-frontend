@@ -6,14 +6,6 @@ mat-toolbar {
     justify-content: space-evenly;
 }
 
-/* .example-spacer {
-    flex: 1 1 auto;
-} */
-
-/* mat-toolbar > .credits, .emailinfo, .socialDiv {
-    flex: 1 1 auto;
-} */
-
 .credits {
     font-size: small;
     max-width: 300px;
@@ -27,6 +19,14 @@ mat-toolbar {
     line-height: 22px;
     margin: 0;
     padding: auto;
+}
+
+@media only screen and (min-width: 701px) {
+    .smCredits {display: none;}
+}
+
+@media only screen and (max-width: 700px) {
+    .lgCredits {display: none;}
 }
 
 .emailinfo {
@@ -58,10 +58,3 @@ mat-toolbar {
     color: rgb(58, 59, 59);
 }
 
-@media only screen and (min-width: 701px) {
-    .smCredits {display: none;}
-}
-
-@media only screen and (max-width: 700px) {
-    .lgCredits {display: none;}
-}

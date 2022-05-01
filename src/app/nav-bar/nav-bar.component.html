@@ -1,6 +1,7 @@
 <!--Nav bar on the top of each page-->
 <mat-toolbar>   
 
+
     <!--This div is the picture that will link back to home page-->
     <div class="divImg"> 
         <button mat-button matTooltip="Home" class="btnimg">
@@ -10,14 +11,20 @@
         </button>
     </div>
 
+
     <span class="example-spacer"></span>
 
+
+    <!-- Title of the bav bar -->
     <p class="title">Celestial Coffee Shop</p>
 
+
     <span class="example-spacer"></span>
 
+
     <div class="navBtns">
-        <!--This button will direct to checkout page-->
+
+        <!--This is the checkout page button-->
         <div class="basketbtn"> 
             <button mat-mini-fab matTooltip="Checkout" class="example-icon" aria-label="Example icon-button with basket icon">
                 <a class="btn" routerLink="checkout" routerLinkActive="active">
@@ -26,9 +33,9 @@
             </button>
         </div>
 
-        <!--This expansion panel will reaveal 2 options to either log out/in or go to profile-->
+        <!--This expansion panel will reaveal 2 options to either go to account or login/logout-->
         <div class="profilebtn">
-            <mat-expansion-panel matTooltip="Profile" hidetoggle>
+            <mat-expansion-panel matTooltip="Profile" hideToggle>
                 <mat-expansion-panel-header>
                     <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
                         <mat-icon>perm_identity</mat-icon>
@@ -43,5 +50,6 @@
                 </button>
             </mat-expansion-panel>
         </div>
+
     </div>
 </mat-toolbar>

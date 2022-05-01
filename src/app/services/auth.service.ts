@@ -24,14 +24,7 @@ export class AuthService {
   public isAuthenticated(): boolean {
     return !this.jwtHelper.isTokenExpired('token');
   }
-
-  // login(email: string, password: string): Observable<any> {
-  //   return this.http.post(AUTH_API + 'login', {
-  //     email,
-  //     password
-  //   }, httpOptions);
-  // }
-
+  
   login(email: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + "login", { email, password });
   }

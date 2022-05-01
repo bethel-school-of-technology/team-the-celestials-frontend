@@ -1,8 +1,6 @@
 .flex-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* flex-wrap: wrap; */
-    width: 80%;
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -29,7 +27,6 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 @media only screen and (max-width: 1200px) {
     .flex-container {

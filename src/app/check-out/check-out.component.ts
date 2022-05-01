@@ -14,22 +14,23 @@ export class CheckOutComponent implements OnInit {
   constructor(private coffeesService: CoffeesService) { }
 
   ngOnInit(): void {
+
+    //Takes coffees in LocalStorage and changes them to an array of objects ot be displayed when page is loaded
     let coffeeString = localStorage.getItem('items');
 
       if (coffeeString !== null) {
 
-      this.items = JSON.parse(coffeeString);
-
-     
+      this.items = JSON.parse(coffeeString);     
     }
   }
-    deleteItem(index: number) {
 
-        this.items.splice(index, 1);
-        localStorage.setItem("items", JSON.stringify(this.items))
+  // Slices object from array and sends updated updated coffee card list back to LocalStorage
+  deleteItem(index: number) {
+      this.items.splice(index, 1);
+      localStorage.setItem("items", JSON.stringify(this.items))
+  }
 
-    }
-
+    // Sends coffee id's to backend when customer checks out
     checkoutOrder() {
       let coffeeIds = [];
 

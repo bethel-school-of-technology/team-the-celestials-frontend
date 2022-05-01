@@ -31,27 +31,25 @@ export class OrderProfileComponent implements OnInit {
         this.currentUser = JSON.parse(userString);
       }
 
-      // This calls the coffee service to get orders for user.
+      //This calls the coffee service to get orders for user.
       this.coffeesService.getOrders().subscribe( response => {
         this.orders = response;
       })
     }
 
-    // This sends to the the user service to delete the user account.
+    //This sends to the the user service to delete the user account.
     removeUser() {
       this.myUserService.deleteUser().subscribe(response => {
         console.log(response);
       })
     }
 
-    // This sends the updated user info to the user service.
+    //This sends the updated user info to the user service.
     saveUser(firstName:string, lastName:string, email:string, phoneNumber:number) {
       this.myUserService.editUser(firstName, lastName, email, phoneNumber).subscribe(response => {
         console.log(response);
       })
     }
-
-
 
 }
 
