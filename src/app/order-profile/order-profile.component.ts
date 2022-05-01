@@ -1,7 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
+import { Order } from '../models/order';
 import { UserService } from '../services/user.service';
+import { CoffeesService } from '../services/coffees.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -17,8 +19,9 @@ export class OrderProfileComponent implements OnInit {
     // Property to store current user Info
     public currentUser: User = new User();
     userID: number | any;
+    public orders: Order[];
 
-    constructor(private actRoute: ActivatedRoute, private myUserService: UserService, private router: Router) { }
+    constructor(private actRoute: ActivatedRoute, private myUserService: UserService, private router: Router, private coffeesService: CoffeesService) { }
    
     ngOnInit(): void {
 
@@ -28,17 +31,25 @@ export class OrderProfileComponent implements OnInit {
         this.currentUser = JSON.parse(userString);
       }
 
-      // Extracted the ID from URL
-      // this.userID = this.actRoute.snapshot.paramMap.get("userID");
-      // console.log(this.userID);
-
-      // // Fetch the usercorresponding to the ID
-      // this.myUserService.getOneUser(this.userID).subscribe(response => {
-      //   console.log(response);
-      //   this.currentUser = response;
-      // })
+      // This calls the coffee service to get orders for user.
+      this.coffeesService.getOrders().subscribe( response => {
+        this.orders = response;
+      })
     }
-  
+
+    // This sends to the the user service to delete the user account.
+    removeUser() {
+      this.myUserService.deleteUser().subscribe(response => {
+        console.log(response);
+      })
+    }
+
+    // This sends the updated user info to the user service.
+    saveUser(firstName:string, lastName:string, email:string, phoneNumber:number) {
+      this.myUserService.editUser(firstName, lastName, email, phoneNumber).subscribe(response => {
+        console.log(response);
+      })
+    }
 
 
 

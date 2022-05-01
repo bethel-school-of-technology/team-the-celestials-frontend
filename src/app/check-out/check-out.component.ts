@@ -39,10 +39,10 @@ export class CheckOutComponent implements OnInit {
       }
       this.coffeesService.postOrder(coffeeIds).subscribe(response => {
         // If statement needs to be created. Response needed from backened confirming order received then below actions can be taken.
-        this.items = [];
-        localStorage.setItem('items', "[]");
-      },
-      )
+        console.log(response);
+      })
+      this.items = [];
+      localStorage.setItem('items', "[]");
     }
   
 }

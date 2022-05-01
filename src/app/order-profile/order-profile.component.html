@@ -36,17 +36,12 @@
       </p>
 
       <div class="example-button-row">
-        <button mat-raised-button>Edit Info </button>
-        <button mat-raised-button color="primary">Delete Account </button>
-
-        <a mat-raised-button routerLink=".">Link</a>
+        <button mat-raised-button color="accent" (click)="saveUser(currentUser.firstName, currentUser.lastName, currentUser.email, currentUser.phoneNumber)">Save</button>
+        <button mat-raised-button color="warn" (click)="removeUser()">Delete Account</button>
       </div>
       <br>
 
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>My Order/Confirmation</mat-label>
-        <input matInput disabled value="Order#">
-      </mat-form-field>
+      
       
       <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-form-field class="example-full-width" appearance="fill">
@@ -56,6 +51,12 @@
        
       </tr></table>
     </form>
+    <mat-card class="confirmationCard">
+      <mat-card-title id="confirmationTitle">My Order/Confirmation#</mat-card-title>
+      <mat-card-content id="confirmationContent" *ngFor="let order of orders">
+        <div id="eachOrder">{{order.order_id}}</div>
+      </mat-card-content>
+    </mat-card>
   
 
   </div>

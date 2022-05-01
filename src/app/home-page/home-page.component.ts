@@ -15,8 +15,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.coffeesService.getCoffees().subscribe(response => {
       this.coffees = response;
-    },
-    )
+    })
   }
 
     addItemToCart(coffee: Coffee){
