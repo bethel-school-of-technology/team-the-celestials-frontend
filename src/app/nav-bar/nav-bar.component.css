@@ -2,6 +2,9 @@ mat-toolbar {
     height: 100px;
     background-color: rgb(228, 163, 85);
     width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .example-spacer {
@@ -10,8 +13,7 @@ mat-toolbar {
 
 .divImg {
     height: 100%;
-    width: auto ;
-    margin-left: 50px;
+    width: auto;
 }
 
 .btnimg {
@@ -29,6 +31,10 @@ img {
 
 .title {
     font-size: 4.8vw;
+}
+
+.navBtns {
+    display: flex;
 }
 
 .basketbtn {

@@ -16,30 +16,32 @@
 
     <span class="example-spacer"></span>
 
-    <!--This button will direct to checkout page-->
-    <div class="basketbtn"> 
-        <button mat-mini-fab matTooltip="Checkout" class="example-icon" aria-label="Example icon-button with basket icon">
-            <a class="btn" routerLink="checkout" routerLinkActive="active">
-                <mat-icon matBadge="{{itemsInCart}}">shopping_basket</mat-icon>
-            </a>
-        </button>
-    </div>
+    <div class="navBtns">
+        <!--This button will direct to checkout page-->
+        <div class="basketbtn"> 
+            <button mat-mini-fab matTooltip="Checkout" class="example-icon" aria-label="Example icon-button with basket icon">
+                <a class="btn" routerLink="checkout" routerLinkActive="active">
+                    <mat-icon matBadge="{{itemsInCart}}">shopping_basket</mat-icon>
+                </a>
+            </button>
+        </div>
 
-    <!--This expansion panel will reaveal 2 options to either log out/in or go to profile-->
-    <div class="profilebtn">
-        <mat-expansion-panel matTooltip="Profile" hidetoggle>
-            <mat-expansion-panel-header>
-                <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
-                    <mat-icon>perm_identity</mat-icon>
+        <!--This expansion panel will reaveal 2 options to either log out/in or go to profile-->
+        <div class="profilebtn">
+            <mat-expansion-panel matTooltip="Profile" hidetoggle>
+                <mat-expansion-panel-header>
+                    <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
+                        <mat-icon>perm_identity</mat-icon>
+                    </button>
+                </mat-expansion-panel-header>
+                <button mat-button>
+                    <a class="btn" routerLink="profile/:userID" routerLinkActive="active">Account</a>
                 </button>
-            </mat-expansion-panel-header>
-            <button mat-button>
-                <a class="btn" routerLink="profile/:userID" routerLinkActive="active">Account</a>
-            </button>
-            <br>
-            <button mat-button>
-                <a class="btn" routerLink="/login" routerLinkActive="active">Login/Logout</a>
-            </button>
-        </mat-expansion-panel>
+                <br>
+                <button mat-button>
+                    <a class="btn" routerLink="/login" routerLinkActive="active">Login/Logout</a>
+                </button>
+            </mat-expansion-panel>
+        </div>
     </div>
 </mat-toolbar>

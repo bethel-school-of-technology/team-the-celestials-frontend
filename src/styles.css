@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-body {
+html, body { height: 100% }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    width: 100%;
     background-image: url(https://cdn.pixabay.com/photo/2020/07/29/08/33/coffee-5447420_1280.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed; 
@@ -11,11 +12,12 @@ body {
 }
 
 app-root {
-    display: block;
+    /* display: block; */
     height: 100%;
+    width: 100%;
   }
 
-a { cursor: pointer }
+/* a { cursor: pointer }
 
 .app-container {
     min-height: 320px;
@@ -26,4 +28,4 @@ a { cursor: pointer }
     width: 40px;
     text-align: center;
     box-sizing: content-box;
-}
+} */
