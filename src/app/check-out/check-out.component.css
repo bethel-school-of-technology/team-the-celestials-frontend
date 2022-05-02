@@ -47,7 +47,7 @@
     .example-button-row a {
       margin-right: 8px;
     
-      background-color: rgb(16, 204, 94);
+      background-color: rgb(174, 121, 52);
     }
 
     img {
@@ -79,3 +79,12 @@
   .divcoffee {
     border: solid 2px black;
   }
+
+
+.formDiv {
+  background-color: rgb(174, 121, 52);
+  padding: 30px;
+  margin-top: 50%;
+  margin-bottom: 50%;
+  border-radius: 10px;
+}

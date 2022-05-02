@@ -16,7 +16,7 @@
         <td><mat-form-field class="example-full-width" appearance="fill">
           <mat-label>First Name</mat-label>
           <input matInput>
-           <p> {{currentUser.firstName }}  </p>
+           <p> [(ngModel)]="user.email"}  </p>
            <p>Trying to get name</p>
         </mat-form-field></td>
         <td><mat-form-field class="example-full-width" appearance="fill">
@@ -33,7 +33,7 @@
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Phone Number</mat-label>
           <textarea matInput></textarea>
-          <p>hello</p>
+          <p>[(ngModel)]="user.phone} </p>
         </mat-form-field>
       </p>
 
