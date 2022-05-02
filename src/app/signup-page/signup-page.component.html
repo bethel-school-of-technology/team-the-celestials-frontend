@@ -3,8 +3,7 @@
         <form class="flex">
             <div id="heading"> 
                 <br>
-                <br>
-                <h1>Sign Up</h1>
+                <p class="title">Sign Up</p>
             </div>
             <br>
             <div class="form-group">
@@ -29,9 +28,10 @@
                     minlength="8" placeholder="Password" />
             </div>
 
+            <br>
 
             <div class="flex-button">
-                <button type="button" (click)="register()" class="form-button btn-primary btn:hover">
+                <button mat-raised-button type="button" (click)="register()" class="form-button btn-primary btn:hover">
                     Submit
                 </button>
                 <br>

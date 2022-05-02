@@ -13,12 +13,13 @@ export class HomePageComponent implements OnInit {
   constructor(private coffeesService: CoffeesService) {}
 
   ngOnInit(): void {
+    // Pulls from coffees service and displays coffees from the database
     this.coffeesService.getCoffees().subscribe(response => {
       this.coffees = response;
-    },
-    )
+    })
   }
 
+  //Add coffee to local storage for Cart
     addItemToCart(coffee: Coffee){
       const localStorageContent = localStorage.getItem('items');
 

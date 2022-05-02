@@ -3,22 +3,21 @@
         <form class="flex">
             <div id="heading">
                 <br>
+                <p class="title">Login</p>
                 <br>
-                <h1>Login</h1>
             </div>
             <div>
-                <div class="form-container"></div> <label for="Email"></label>
                 <input class="form-input" name="email" type="text" placeholder="Email" [(ngModel)]="user.email" />
             </div>
             <div class="form-container"> <label for="Password"></label>
                 <input class="form-input" name="Password" type="password" placeholder="Password"
                     [(ngModel)]="user.password" />
             </div>
-            <div class="flex-button"> <button type="button" class="form-button" (click)="goToLogin()">Login</button>
+            <br>
+            <div class="flex-button"> 
+                <button mat-raised-button class="form-button" (click)="goToLogin()">Login</button>
                 <br>
                 <br>
-                <br>
-
                 <h3>Don't have an account?</h3>
                 <button mat-raised-button>
                     <a class="clickHere" routerLink="/signup">Click here</a>

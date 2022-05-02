@@ -1,45 +1,46 @@
-<!--the Footer on the bottom of the pages-->
+
 <mat-toolbar>
 
-    <!--This the credits at the left of the div-->
+    <!--Credits on the left of the footer. Different credits for different size screen-->
     <div class="credits">
-        <p>Website Created by Team “The Celestials”</p>
-        <p>Front End Team: Huck Woody, Allyson Lambson, Dmitriy Chayka</p>
-        <p>Backend Team: Isaac Rodriguez, Evani Gil</p>
+        <p class="smCredits">Website Created by “The Celestials”</p>
+        <p class="smCredits">Front End Team: Huck, Allyson, Dmitriy </p>
+        <p class="smCredits">Backend Team: Isaac, Evani </p>
+        <p class="lgCredits">Website Created by Team “The Celestials”</p>
+        <p class="lgCredits">Front End Team: Huck Woody, Allyson Lambson, Dmitriy Chayka</p>
+        <p class="lgCredits">Backend Team: Isaac Rodriguez, Evani Gil</p>
     </div>
 
-    <span class="example-spacer"></span>
-
-    <!--Middle words of the footer-->
+    <!--Info in middle of footer-->
     <div class="emailinfo">
         <p>Email us for support or to hire us for your website build at: thecelestials@developers.com</p>
     </div>
 
-    <span class="example-spacer"></span>
+    <!--Buttons to social media sites-->
+    <div class="socialDiv">
+        <div class="sociallinks"> 
+            <button mat-mini-fab class="example-icon" aria-label="Example icon-button with facebook icon">
+                <a class="link" href="https://www.facebook.com/" target="_blank">
+                    <fa-icon [icon]="['fab', 'facebook']" size="lg"></fa-icon>
+                </a>
+            </button>
+        </div>
 
-    <!--These are the bottons to the social media pages-->
-    <div class="sociallinks"> 
-        <button mat-mini-fab class="example-icon" aria-label="Example icon-button with facebook icon">
-            <a class="link" href="https://www.facebook.com/" target="_blank">
-                <fa-icon [icon]="['fab', 'facebook']" size="lg"></fa-icon>
-            </a>
-        </button>
-    </div>
+        <div class="sociallinks">
+            <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
+                <a class="link" href="https://twitter.com/" target="_blank">
+                    <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
+                </a>
+            </button>
+        </div>
 
-    <div class="sociallinks">
-        <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
-            <a class="link" href="https://twitter.com/" target="_blank">
-                <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
-            </a>
-        </button>
-    </div>
-
-    <div class="sociallinks">
-        <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
-            <a class="link" href="https://www.instagram.com/" target="_blank">
-                <fa-icon [icon]="['fab', 'instagram']" size="lg"></fa-icon>
-            </a>
-        </button>
+        <div class="sociallinks">
+            <button mat-mini-fab class="example-icon" aria-label="Example icon-button with perm identity icon">
+                <a class="link" href="https://www.instagram.com/" target="_blank">
+                    <fa-icon [icon]="['fab', 'instagram']" size="lg"></fa-icon>
+                </a>
+            </button>
+        </div>
     </div>
 
 

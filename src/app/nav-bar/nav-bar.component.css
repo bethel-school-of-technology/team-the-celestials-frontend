@@ -2,16 +2,14 @@ mat-toolbar {
     height: 100px;
     background-color: rgb(228, 163, 85);
     width: auto;
-}
-
-.example-spacer {
-    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .divImg {
     height: 100%;
-    width: auto ;
-    margin-left: 50px;
+    width: auto;
 }
 
 .btnimg {
@@ -27,18 +25,27 @@ img {
     height: 100%;
 }
 
+.example-spacer {
+    flex: 1 1 auto;
+}
+
 .title {
     font-size: 4.8vw;
 }
 
+.navBtns {
+    display: flex;
+    background-color: rgb(228, 163, 85);
+}
+
 .basketbtn {
     margin-right: 15px;
-
 }
 
 mat-icon {
     color: rgb(58, 59, 59);
 }
+
 .btn  {
     color: white;
     text-decoration: none;
@@ -48,7 +55,6 @@ mat-icon {
     margin-left: 15px;
     margin-right: 15px;
 }
-
 
 @media only screen and (min-width: 1200px) {
     .title {

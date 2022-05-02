@@ -9,12 +9,22 @@
 .signupDiv {
     background-color: rgb(174, 121, 52);
     padding: 30px;
-    margin-top: 50%;
-    margin-bottom: 50%;
+    margin-top: 165px;
+    margin-bottom: 165px;
     border-radius: 10px;
+}
+
+.form-input {
+    height: 20px;
+    border-radius: 5px;
 }
 
 .clickHere  {
     color: white;
     text-decoration: none;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 500;
 }

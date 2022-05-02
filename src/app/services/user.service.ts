@@ -22,19 +22,19 @@ export class UserService {
         return this.http.get<User[]>('/api/users');
     }
 
-    /**getById(id: number) {
-        return this.http.get('/api/users/' + id);
-    } **/
-
     create(user: User) {
         return this.http.post('/api/users', user);
     }
 
-    /** update(user: User) {
-        return this.http.put('/api/users/' + user.id, user);
-    }**/
+    //Delete user account
+    deleteUser():Observable<User[]>{
+        return this.http.delete<User[]>(this.myUserUrl + "/delete")
+    }
 
-   /** delete(id: number) {
-        return this.http.delete('/api/users/' + id);
-    }**/
+    // Save the changes to the user profile
+    editUser(firstName:string, lastname:string, emial:string, phoneNumber:number):Observable<User[]>{
+        // The .delete should be a .put. Have to figure out why it throws the error.
+        return this.http.delete<User[]>(this.myUserUrl + "/updateProfile");
+    }
+
 }
