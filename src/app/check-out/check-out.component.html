@@ -1,54 +1,35 @@
 
-<!--ngFor loops that loops through the mockdb and displays the coffees-->
-
-
 <div class="wholePage">
 
-<div class="Title" >
+  <div class="Title" >
 
-  <div class="checkoutBody">
+    <div class="checkoutBody">
 
-    <mat-card>Credit Card Transaction</mat-card>
+      <mat-card>Credit Card Transaction</mat-card>
 
-    <form class="example-form">
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Please Enter Your </mat-label>
-        <input matInput disabled value="                 Credit Card Info">
-      </mat-form-field>
-    
-      <table class="example-full-width" cellspacing="0"><tr>
-        <td><mat-form-field class="example-full-width" appearance="fill">
+      <br>
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Credit Card Number</mat-label>
-          <input matInput>
-        </mat-form-field></td>
-      
-      </tr></table>
-    
-      <p>
-       
+          <input matInput placeholder="Ex. 0000000000000000">
+        </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Expiration Date</mat-label>
-          <textarea matInput></textarea>
+          <input matInput placeholder="Ex. 12/22">
         </mat-form-field>
-      </p>
-    
-      <table class="example-full-width" cellspacing="0"><tr>
-        <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>CVV</mat-label>
           <input matInput placeholder="Ex. 556">
-        </mat-form-field></td>
-        
-      </tr></table>
-    </form>
-    <div class="example-button-row">
-      <button mat-raised-button>Pay with 3rd Party </button>
-      <button mat-raised-button color="primary" (click)="checkoutOrder()">Submit Order </button>
+        </mat-form-field>
+      </form>
+      <br>
+      <div class="example-button-row">
+        <button mat-raised-button>Pay with PayPal </button> <br><br>
+        <button mat-raised-button (click)="checkoutOrder()">Submit Order </button>
+      </div>
     </div>
   </div>
-    
-
-  </div>
-
 
   <div class="checkoutList">
     <div class="listItems">
@@ -57,7 +38,7 @@
               <h2>{{item.nameOfCoffee}}</h2>
               <img [src]='item.img_url'/>
               <p>Price: ${{item.price}}</p>
-              <button mat-raised-button color="primary" (click)="deleteItem(i)">Delete Item</button>
+              <button mat-raised-button (click)="deleteItem(i)">Delete Item</button>
               <br>
               <br>
           </div>

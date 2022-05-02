@@ -3,8 +3,8 @@ width: 500px;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
-margin-top: 55px;
-margin-bottom: 55px;
+margin-top: 100px;
+margin-bottom: 100px;
 height: 100%;
 }
 
@@ -21,9 +21,9 @@ height: 100%;
     width: 100%;
 }
 
+
 .example-full-width {
   width: 100%;
-  background-color: rgb(73, 112, 33);
 }
 
 td {
@@ -35,7 +35,6 @@ mat-label{
 .example-button-row button,
 .example-button-row a {
   margin-right: 8px;
-  background-color: rgb(16, 28, 204);
 }
 
 .confirmationCard {

@@ -4,63 +4,41 @@
 
 
       <h1><mat-card>My Profile </mat-card></h1>
- 
-    
-    <form class="example-form">
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Acount Information)</mat-label>
-        <input matInput disabled value="Order#">
-      </mat-form-field>
-    
-      <table class="example-full-width" cellspacing="0"><tr>
-        <td><mat-form-field class="example-full-width" appearance="fill">
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>First Name</mat-label>
           <input matInput name="firstName" [(ngModel)]="currentUser.firstName">
-        </mat-form-field></td>
-
-        <td><mat-form-field class="example-full-width" appearance="fill">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Last Name</mat-label>
           <input matInput name="lastName" [(ngModel)]="currentUser.lastName">
-        </mat-form-field></td>
-      </tr></table>
-    
-      <p>
+        </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Email</mat-label>
-          <textarea matInput name="email" [(ngModel)]="currentUser.email" placeholder="celestials@example.com"></textarea>
+          <input matInput name="email" [(ngModel)]="currentUser.email">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Phone Number</mat-label>
-          <textarea matInput name="phoneNumber" [(ngModel)]="currentUser.phoneNumber" placeholder="10 Digit phone number"></textarea>
+          <mat-label>Phone</mat-label>
+          <input matInput name="phoneNumber" [(ngModel)]="currentUser.phoneNumber">
         </mat-form-field>
-      </p>
+      </form>
 
       <div class="example-button-row">
-        <button mat-raised-button color="accent" (click)="saveUser(currentUser.firstName, currentUser.lastName, currentUser.email, currentUser.phoneNumber)">Save</button>
-        <button mat-raised-button color="warn" (click)="removeUser()">Delete Account</button>
+        <button mat-raised-button (click)="saveUser(currentUser.firstName, currentUser.lastName, currentUser.email, currentUser.phoneNumber)">Save</button>
+        <button mat-raised-button (click)="removeUser()">Delete Account</button>
       </div>
+
       <br>
 
+      <mat-card class="confirmationCard">
+        <mat-card-title id="confirmationTitle">My Orders / Confirmation #'s:</mat-card-title>
+        <mat-card-content id="confirmationContent" *ngFor="let order of orders">
+          <div id="eachOrder">{{order.order_id}}</div>
+        </mat-card-content>
+      </mat-card>
       
-      
-      <table class="example-full-width" cellspacing="0"><tr>
-        <td><mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Products Purchased:</mat-label>
-          <input matInput placeholder="Ex. San Francisco">
-        </mat-form-field></td>
-       
-      </tr></table>
-    </form>
-    <mat-card class="confirmationCard">
-      <mat-card-title id="confirmationTitle">My Order/Confirmation#</mat-card-title>
-      <mat-card-content id="confirmationContent" *ngFor="let order of orders">
-        <div id="eachOrder">{{order.order_id}}</div>
-      </mat-card-content>
-    </mat-card>
-  
-
   </div>
-
     
 </div>
 

@@ -19,13 +19,6 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    /**Home page for Huck
-    let myToken = localStorage.getItem("userToken");
-
-    this.service.getProfile(myToken).subscribe(response => {
-      this.userData = response;
-    })*/
-
   }
   goToSignUp() {
     this.router.navigate(['./signup']);

@@ -1,8 +1,8 @@
 .wholePage {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 55px;
-  margin-bottom: 55px;
+  margin-top: 125px;
+  margin-bottom: 125px;
 }
 
 .example-card {
@@ -22,7 +22,7 @@
   }
 
   .checkoutBody {
-    height: 500px;
+    height: 400px;
     background-color: rgb(174, 121, 52);
     padding: 30px;
     margin-left: auto;
@@ -41,7 +41,7 @@
     
     .example-full-width {
       width: 100%;
-      background-color: rgb(144, 150, 121);
+      /* background-color: white; */
     }
     
     td {
@@ -53,8 +53,6 @@
     .example-button-row button,
     .example-button-row a {
       margin-right: 8px;
-    
-      background-color: rgb(16, 204, 94);
     }
 
     img {
@@ -74,7 +72,6 @@
     background-color: rgb(174, 121, 52);
     padding: 30px;
     border-radius: 10px;
-    
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -87,6 +84,6 @@
     .listItems {
       overflow-x: hidden;
       overflow-y: auto;
-      height: 500px; 
+      height: 400px; 
     }
   }
